@@ -10,27 +10,49 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        VStack(spacing: 35) {
-            Image(systemName: "airpods")
-                .foregroundStyle(.red)
-                .symbolVariant(/*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 50) {
             
-            Image(systemName: "airpodsmax")
+            Label("Nublado", systemImage: "cloud.sun")
+                .font(.largeTitle)
                 .foregroundStyle(.blue)
-                
-            Image(systemName: "macbook")
-                .foregroundStyle(.yellow)
-                .symbolVariant(.slash)
+                .shadow(radius: 10)
             
-            Image(systemName: "ipad")
-                .foregroundStyle(.purple)
+            Label("@junioleoncio", systemImage: "swift")
+                .font(.largeTitle)
+                .foregroundStyle(.blue)
+                .shadow(radius: 10)
+                .padding()
+                .background(.yellow)
+                .clipShape(.capsule)
+                .labelStyle(.titleAndIcon)
+            
+            Label("Chuvuso", systemImage: "cloud.rain")
+                .font(.largeTitle)
+                .foregroundStyle(.white)
+                .padding()
+                .background(.gray.gradient)
+                .clipShape(.rect(cornerRadius: 10))
+                .symbolVariant(.circle)
+                .labelStyle(.iconOnly)
+            
+            Label("Noturno", systemImage: "moon.dust")
+                .font(.title)
+                .foregroundStyle(.white)
+                .padding()
+                .background(.blue)
+                .clipShape(.rect(cornerRadius: 10))
                 .symbolVariant(.circle)
             
-            Image(systemName: "macmini")
-                .foregroundStyle(.green)
-                .symbolVariant(.rectangle)
+            Label(
+                title: { Text("vcconsegue")
+                        .foregroundStyle(.blue)
+                },
+                icon: { Image(systemName: "hands.and.sparkles")
+                        .font(.largeTitle)
+                    
+                }
+            )
         }
-        .font(.system(size: 80))
     }
 }
 
